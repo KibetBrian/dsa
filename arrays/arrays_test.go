@@ -11,9 +11,6 @@ func TestInsertBeginnning(t *testing.T) {
 	numToBeInserted := 232;
 
 	numbers = InsertBeginnning(numbers, numToBeInserted)
-	if numbers[0]==numToBeInserted{
-		t.Log(numbers)
-	}
 	require.Equal(t, numbers[0],numToBeInserted)
 }
 
