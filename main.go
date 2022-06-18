@@ -2,18 +2,12 @@ package main
 
 import (
 	"log"
-	"dsa/stack"
+	"dsa/stack/problems"
 
 )
 
 func main() {
-	stack := stack.Stack{}
-	stack.Push(1)
-	stack.Push(2)
-	stack.Push(3)
-	log.Println(stack.Pop())
-	log.Println(stack.Peek())
-	log.Println(stack.Peek())
-	log.Println(stack.Peek())
-	
+	name := "brian"	
+	reversed := problems.Reverse(name)
+	log.Println(name, reversed)
 }
