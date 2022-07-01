@@ -8,7 +8,7 @@ import (
 
 func TestPush(t *testing.T) {
 	stack := Stack{}
-	total := 10
+	total := 10;
 
 	//Push values into a stack
 	for i := 0; i < total; i++ {
@@ -20,22 +20,22 @@ func TestPush(t *testing.T) {
 	require.Equal(t, size, total)
 }
 
-func TestPop(t *testing.T) {
+func TestPop (t *testing.T){
 	stack := Stack{}
 	total := 5
 	//Inset values upto total - 1
 	for i := 0; i < total; i++ {
 		stack.Push(i)
 	}
-
-	poped := stack.Pop()
+	
+	poped := stack.Pop();
 	size := len(stack.values)
-
+	
 	require.Equal(t, poped, total-1)
 	require.Equal(t, size, total-1)
 }
 
-func TestPeek(t *testing.T) {
+func TestPeek (t *testing.T) {
 	stack := Stack{}
 	total := 5
 
@@ -43,8 +43,8 @@ func TestPeek(t *testing.T) {
 	for i := 0; i < total; i++ {
 		stack.Push(i)
 	}
-	peeked := stack.Peek()
+	peeked, _ := stack.Peek()
 	size := len(stack.values)
-	require.Equal(t, peeked, total-1)
-	require.Equal(t, size, total)
+	require.Equal(t, peeked, total-1);
+	require.Equal(t, size, t)
 }
