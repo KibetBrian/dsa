@@ -34,6 +34,4 @@ func TestDeleteAtAnyWhere(t *testing.T){
 			t.Errorf("\nDeletion didn't work.\n OriginalNumbers: %v\n NewNumbers: %v",numbers,newNumbs)
 		}
 	}
-
-
 }
