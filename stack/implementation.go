@@ -1,5 +1,7 @@
 package stack
 
+import "errors"
+
 //Implementing stack using slice
 type Stack struct {
 	values []int
@@ -15,6 +17,13 @@ func (s *Stack) Pop() int {
 	return val
 }
 
-func (s *Stack) Peek() int{
-	return s.values[len(s.values)-1]
+func (s *Stack) Peek() (int, error){
+	if len(s.values) == 0{
+		return -1, errors.New("Stack is empty");
+	}
+	return s.values[len(s.values)-1], nil
+}
+
+func (s *Stack) Size() int{
+	return len(s.values)
 }
