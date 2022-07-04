@@ -1,13 +1,17 @@
 package main
 
 import (
-	"log"
-	"dsa/stack/problems"
-
+	"dsa/graphs"
 )
 
 func main() {
-	name := "brian"	
-	reversed := problems.Reverse(name)
-	log.Println(name, reversed)
+	names := []string{"Brian","Kemboi","Kibet"}
+	myGraph := graphs.Graph{}
+
+	for i := 0; i <len(names); i++ {
+		myGraph.Insert(names[i])
+	}
+	myGraph.PrintValues()
+
 }
+
